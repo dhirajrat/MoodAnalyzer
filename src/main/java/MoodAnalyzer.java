@@ -1,14 +1,21 @@
 public class MoodAnalyzer {
 
+    String moodMessage;
+
     /**
-     * Analyze Mood method
-     * @param message
+     * Constructor
+     * @param moodMessage
+     */
+    public MoodAnalyzer(String moodMessage) {
+        this.moodMessage = moodMessage;
+    }
+
+    /**
+     * Analyze Mood Method
      * @return
      */
-    public String analyzeMood(String message){
-
-
-        if(message.contains("sad")){
+    public String analyzeMood(){
+        if(moodMessage.contains("sad")){
             return "SAD";
         }
         else {
