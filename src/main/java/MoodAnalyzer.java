@@ -15,11 +15,17 @@ public class MoodAnalyzer {
      * @return
      */
     public String analyzeMood(){
-        if(moodMessage.contains("sad")){
-            return "SAD";
+        try {
+            if (moodMessage == null) {
+                return "HAPPY";
+            }
+
+            if (moodMessage.contains("sad")) {
+                return "SAD";
+            } else {
+                return "HAPPY";
+            }
         }
-        else {
-            return "HAPPY";
-        }
+        catch (NullPointerException e){return null;}
     }
 }
